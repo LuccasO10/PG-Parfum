@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#000;
+    overflow-x:hidden;
+}
+
+/* HERO BACKGROUND */
+
+.destaque{
+    width:100%;
+    min-height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('../img/fundo.png');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:0 7%;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height: 50px;
+    padding: 65px 0 0 0;;
+}
+
+.logo{
+
+    width:120px;
+    margin-top: 25px;
+}
+
+.nav-links{
+    display:flex;
+    gap:60px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#c9a86a;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.active{
+    border-bottom:2px solid #c9a86a;
+    padding-bottom:6px;
+}
+
+/* ICONS */
+
+.icons-top{
+    display:flex;
+    gap:20px;
+    color:#c9a86a;
+    font-size:22px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:85vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:50px;
+}
+
+/* TEXTO */
+
+.hero-text{
+    flex:1;
+}
+
+.logo-central{
+    width:600px;
+    margin-bottom:20px;
+}
+
+.hero-text h1{
+    color:#c9a86a;
+
+    font-size:25px;
+    font-weight:300;
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+
+    line-height:1.7;
+    letter-spacing:5px;
+
+    margin-bottom:60px;
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+    display:flex;
+    gap:50px;
+}
+
+.item{
+    color:#c9a86a;
+    max-width:180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item ion-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.item p{
+    font-size: 14px;
+    line-height:1.9;
+
+    letter-spacing: 0.1rem;
+
+    text-transform: uppercase;
+}
+
+/* PERFUME */
+
+.hero-image{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes flutuar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1000px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:50px;
+    }
+
+    .beneficios{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero-text h1{
+        font-size:14px;
+    }
+
+    .logo-central{
+        width:250px;
+    }
+
+    .hero-image img{
+        width: 100%;
+        max-width:350px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
