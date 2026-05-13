@@ -23,6 +23,8 @@ body {
     background-position:center;
 
     padding:0 7%;
+
+    box-sizing: border-box; /* garante que o padding não estoure */
 }
 
 /* NAVBAR */
@@ -95,6 +97,7 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
   justify-items: center;
+  box-sizing:border-box;
 }
 
 .perfume {
@@ -155,6 +158,12 @@ nav {
 /* RESPONSIVO */
 @media(max-width: 768px) {
 
+ 
+
+  .catalogo{
+    padding: 0 20px; /* troca % por px para não estourar */
+  }
+
   .logo {
     display: none;
   }
@@ -165,7 +174,7 @@ nav {
   .nav-links{
         display:flex;              
         flex-direction:row;     
-        gap:10px;                  /* mais compacto */
+        gap:15px;                  /* mais compacto */
         justify-content:center;    
         flex-wrap:wrap;            /* quebra se precisar */
         padding:5px 0;
@@ -173,7 +182,7 @@ nav {
     }
 
   .grid-perfumes {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr);
     gap: 25px;
   }
 
