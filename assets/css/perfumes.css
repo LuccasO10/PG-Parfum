@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #2c2c2c;
+  overflow-x: hidden;
+}
+
+.catalogo{
+    width:100%;
+    min-height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(250, 231, 168, 0.25)),
+    url('../img/fundo.png');
+
+    background-size:cover;
+    background-position:center;
+
+    padding:0 7%;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 7%;
+}
+
+.logo {
+  width: 120px;
+  filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4));
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+}
+
+.active{
+    border-bottom:2px solid #c9a86a;
+    padding-bottom:6px;
+}
+
+.icons-top ion-icon {
+  font-size: 22px;
+  color: #bfa46f;
+  margin-left: 20px;
+}
+
+/* SEÇÃO CATÁLOGO */
+.catalogo-section {
+  text-align: center;
+  padding: 60px 7%;
+
+}
+
+.titulo h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  color: #000;
+  letter-spacing: 3px;
+}
+
+.titulo p {
+  color: #000;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* GRID DE PERFUMES */
+.grid-perfumes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.perfume {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.perfume:hover {
+  transform: translateY(-10px);
+}
+
+.perfume img {
+  width: 160px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.perfume h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: #cd952d;
+  letter-spacing: 1px;
+}
+
+/* BENEFÍCIOS */
+.beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 60px;
+}
+
+.beneficios p
+{
+    color: #000;
+}
+
+.item {
+  color: #cd952d;
+  text-align: center;
+  max-width: 180px;
+}
+
+.item ion-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px) {
+
+  .logo {
+    display: none;
+  }
+  .icons-top{
+    display: none;
+  }
+
+  .nav-links{
+        display:flex;              
+        flex-direction:row;     
+        gap:10px;                  /* mais compacto */
+        justify-content:center;    
+        flex-wrap:wrap;            /* quebra se precisar */
+        padding:5px 0;
+        margin-top: 20px;
+    }
+
+  .grid-perfumes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .beneficios {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
