@@ -6,9 +6,10 @@
 }
 
 body {
-  background: #000;
+  background: #fff;
   color: #2c2c2c;
   overflow-x: hidden;
+  padding-top: 80px;
 }
 
 .catalogo{
@@ -28,11 +29,19 @@ body {
 }
 
 /* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 7%;
+nav{
+    background: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
 }
 
 .logo {
@@ -106,6 +115,7 @@ nav {
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .perfume:hover {

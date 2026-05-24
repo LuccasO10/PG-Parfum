@@ -70,8 +70,8 @@ nav{
   margin-left: 20px;
 }
 
-/* SEÇÃO SOBRE NÓS */
-.sobre-section {
+/* SEÇÃO CONTATO */
+.contato-section {
   padding: 60px 7%;
   text-align: center;
   margin-bottom: 30px;
@@ -82,54 +82,106 @@ nav{
   font-size: 28px;
   color: #000;
   letter-spacing: 3px;
-  margin-bottom: 20px; 
 }
 
-.texto p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 25px;
-  color: #444;
-  text-align: justify;
+.titulo p {
+  color: #000;
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
-.texto{
-    max-width: 900px;
-    
-    background: rgba(255, 255, 255, 0.2);
-    
-    padding: 35px;
-    
-    border-radius: 20px;
-
-    border: solid rgba(206, 172, 22, 0.541);
-
-    backdrop-filter: blur(5px);
-
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-
-    margin: 0 auto;
+/*BLOCO DE CONTATOS*/
+.grid-contato
+{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr) );
+  gap: 40px;
+  justify-items: center;
+  box-sizing:border-box;
 }
 
-.texto h2
+.contatos
+{
+  background: rgba(240, 225, 89, 0.26);
+  border-radius: 10px;
+  border: solid #c9a86a;
+  padding: 35px;
+  margin-top: 20px;
+}
+
+.contatos h2
 {
   text-align: left;
-  margin-bottom: 20px;
 }
 
-.texto h3
+.contatos h3
 {
   text-align: left;
-  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
-/* BENEFÍCIOS */
+.contatos p
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.contatos p:hover
+{
+  transform: translateY(-10px);
+}
+
+.contatos a
+{
+  text-decoration: none;
+  color: #000;
+}
+
+.contatos a:hover
+{
+  color: #fff;
+}
+
+
+.whatsapp
+{
+  background: #008b0c46;
+  padding: 20px;
+  text-align: left;
+  border-radius: 20px;
+  border: solid #0a7400;
+}
+
+.whatsapp ion-icon{
+    font-size:22px;
+    color:#0a7400;
+}
+
+.instagram
+{
+  background: #8b001e46;
+  padding: 20px;
+  text-align: left;
+  border-radius: 20px;
+  border: solid #740027;
+  cursor: pointer;
+}
+
+.instagram ion-icon{
+    font-size:22px;
+    color:#740027;
+}
+
+
+/*BENEFICIOS*/
 .beneficios {
   display: flex;
   justify-content: center;
   gap: 60px;
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 .beneficios p
@@ -152,35 +204,4 @@ nav{
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-/* RESPONSIVO */
-@media(max-width: 768px) {
-
-  .nav-links{
-        display:flex;              
-        flex-direction:row;     
-        gap:15px;                  /* mais compacto */
-        justify-content:center;    
-        flex-wrap:wrap;            /* quebra se precisar */
-        padding:5px 0;
-        margin-top: 20px;
-    }
-  
-  .logo {
-    display: none;
-  }
-  .icons-top{
-    display: none;
-  }
-  .sobre-section {
-    padding: 40px 10%;
-  }
-
-  .texto p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-
 }
