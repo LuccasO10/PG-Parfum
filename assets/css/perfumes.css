@@ -109,6 +109,10 @@ nav{
   box-sizing:border-box;
 }
 
+.card-link{
+    text-decoration: none;
+}
+
 .perfume {
   background: #fff;
   border-radius: 10px;
