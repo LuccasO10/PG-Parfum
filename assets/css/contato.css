@@ -175,6 +175,21 @@ nav{
     color:#740027;
 }
 
+.email
+{
+  background: #8f8e8e;
+  padding: 20px;
+  text-align: left;
+  border-radius: 20px;
+  border: solid #000;
+  cursor:pointer;
+}
+
+.email ion-icon{
+    font-size:22px;
+    color:#fff;
+}
+
 
 /*BENEFICIOS*/
 .beneficios {
