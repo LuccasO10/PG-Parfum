@@ -156,9 +156,7 @@ nav{
 .item p{
     font-size: 14px;
     line-height:1.9;
-
     letter-spacing: 0.1rem;
-
     text-transform: uppercase;
 }
 
@@ -176,7 +174,6 @@ nav{
     width: 600%;
     max-width: 700px;
     margin-top: 100px;
-
     animation: flutuar 4s ease-in-out infinite;
 }
 
@@ -204,136 +201,184 @@ nav{
 
 .sub-titulo
     {
-        margin: 50px 0 20px;
+        margin: 50px 0 35px;
         font-size: 2.2vw;
         font-weight: 500;
         color: var(--cor-font-sub-titulo);
         font-family: 'Cinzel', serif;
+        text-align: center;
     }
-
-.exclusivos
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 30px;
-    
+/*INICIO CONFIRA*/
+.exclusivos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 20px;
 }
 
-
+/* LINK */
 .card-link{
     text-decoration: none;
     color: inherit;
-    display: block;
-    transition: transform 0.3s ease;
 }
 
-.card-link:hover
-{
+/* CARD */
+.exclusivos div{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 2px solid #cd952d;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* HOVER */
+.exclusivos div:hover{
     transform: translateY(-10px);
 }
 
-.exclusivos div img
-{
+/* IMAGEM */
+.exclusivos div img{
     width: 100%;
-    border-radius: 10px;
-    border: solid #cd952d;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    transition: 0.4s ease;
 }
 
-.exclusivos div
-{
-    position: relative;
-
+/* ZOOM */
+.exclusivos div:hover img{
+    transform: scale(1.05);
 }
 
-.exclusivos div h3
-{
+/* ESCURECIMENTO */
+.exclusivos div::after{
+    content: "";
     position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    color: var(--cor-link-topo);
-    white-space: nowrap;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.15),
+        transparent
+    );
+}
+
+/* TITULO */
+.exclusivos div h3{
+    position: absolute;
+    bottom: 22px;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.locais-quentes
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 30px;
-    margin-bottom: 30px;
-}
-
-.locais-quentes div img
-{
-    width: 100%;
-    border-radius: 10px;
-    border: solid #cd952d;
-}
-
-.locais-quentes h3
-{
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-/*INICIO NOTAS DE PERFUMES*/
-
-.card-guia{
-    width: 340px;
-    background: rgba(0,0,0,0.88);
-    border: 1px solid #b8860b;
-    border-radius: 22px;
-    overflow: hidden;
-    transition: 0.3s;
-    backdrop-filter: blur(5px);
-}
-
-.card-guia:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 0 20px rgba(255,191,0,0.25);
-}
-
-.card-guia img{
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
-
-.conteudo-guia{
-    padding: 24px;
-}
-
-.conteudo-guia h3{
-    color: #ffbf00;
-    font-size: 1.7rem;
-    margin-bottom: 15px;
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
     font-family: 'Cinzel', serif;
+    z-index: 2;
 }
+/*FIM CONFIRA*/
 
-.conteudo-guia p{
-    color: #ddd;
-    line-height: 1.7;
-    font-size: 0.97rem;
-    margin-bottom: 20px;
-}
 
-.notas-guia{
+/* MAIS ACESSADOS */
+
+.locais-quentes{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 150px;
+    margin-bottom: 50px;
 }
 
-.notas-guia span{
-    background: rgba(255,191,0,0.08);
-    border: 1px solid #b8860b;
-    color: #ffbf00;
-    padding: 7px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+/* CARD */
+.locais-quentes div{
+    position: relative;
+    width: 320px;
+    height: 420px;
+    border-radius: 28px;
+    overflow: hidden;
     cursor: pointer;
+    transition: 0.5s ease;
+    background: #000;
+    border: 2px solid rgba(205,149,45,0.7);
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.30),
+    0 0 25px rgba(205,149,45,0.15);
 }
+
+/* IMAGEM */
+.locais-quentes div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+/* ESCURECIMENTO PREMIUM */
+.locais-quentes div::after{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.92) 5%,
+        rgba(0,0,0,0.35) 45%,
+        rgba(0,0,0,0.10) 70%,
+        transparent
+    );
+}
+
+/* BRILHO DOURADO */
+.locais-quentes div::before{
+    content: "🔥 MAIS ACESSADO";
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: rgba(205,149,45,0.95);
+    color: black;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 3;
+    box-shadow: 0 0 15px rgba(205,149,45,0.45);
+}
+
+/* TITULO */
+.locais-quentes h3{
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    text-align: center;
+    color: white;
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-family: 'Cinzel', serif;
+    line-height: 1.2;
+    z-index: 2;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
+
+/* HOVER */
+.locais-quentes div:hover{
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+    0 18px 40px rgba(0,0,0,0.40),
+    0 0 35px rgba(205,149,45,0.35);
+}
+
+/* ZOOM IMAGEM */
+.locais-quentes div:hover img{
+    transform: scale(1.08);
+}
+/*FIM MAIS ACESSADOS*/
 
 .cta
 {
@@ -433,6 +478,60 @@ video{
 {
     background-color: green;
 }
+
+/*INICIO RODAPE*/
+/* FAIXA DIFERENCIAIS */
+
+.faixa-diferenciais{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 35px 7%;
+    background: #000;
+    border-top: 1px solid rgba(205,149,45,0.2);
+    border-bottom: 1px solid rgba(205,149,45,0.2);
+}
+
+/* ITEM */
+
+.item-diferencial{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 220px;
+    transition: 0.3s ease;
+}
+
+.item-diferencial:hover{
+    transform: translateY(-4px);
+}
+
+/* ICONES */
+
+.item-diferencial ion-icon{
+    font-size: 2.3rem;
+    color: #cd952d;
+    min-width: 40px;
+}
+
+/* TITULO */
+
+.item-diferencial h3{
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 4px;
+    font-family: 'Cinzel', serif;
+}
+
+/* TEXTO */
+
+.item-diferencial p{
+    color: #a5a5a5;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+/*FIM RODAPE*/
 
 .sobre-nos
 {
