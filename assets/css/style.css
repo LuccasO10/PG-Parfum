@@ -589,145 +589,254 @@ video{
 
 /* RESPONSIVO */
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    /* ===== GERAL ===== */
-    body{
-        overflow-x: hidden;
-    }
+  /* ================= BASE ================= */
+  body {
+    padding-top: 120px;
+    overflow-x: hidden;
+  }
 
-    .destaque{
-        padding: 0 5%;
-    }
+  .destaque {
+    padding: 0 15px;
+  }
 
-    /* ===== NAVBAR ===== */
-    nav{
-        height: 70px;
-        padding: 0 5%;
-    }
+  /* ================= NAV (ESTILO PADRÃO PREMIUM MOBILE) ================= */
+@media (max-width: 768px) {
 
-    .nav-links{
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  /* ================= BASE ================= */
+  body {
+    padding-top: 50px;
+    overflow-x: hidden;
+  }
 
-    .nav-links a{
-        font-size: 11px;
-        letter-spacing: 1px;
-    }
+  .destaque {
+    padding: 0 15px;
+  }
+  
+/* ================= NAV ================= */
+  nav{
+    padding: 0 5%;
+    height: 80px;
+    justify-content: center;
+  }
 
-    .icons-top{
-        display: none;
-    }
+  /* LOGO SOME PRA GANHAR ESPAÇO */
+  .logo{
+    display: none;
+  }
 
-    .logo{
-        display: none;
-    }
+  /* ÍCONES SOMEM NO MOBILE */
+  .icons-top{
+    display: none;
+  }
 
-    /* ===== HERO ===== */
-    .hero{
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-        padding-top: 40px;
-    }
+  /* MENU CENTRALIZADO E RESPONSIVO */
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-    .hero-text h1{
-        font-size: 14px;
-        letter-spacing: 3px;
-        line-height: 1.5;
-    }
+    gap: 10px;
+    width: 100%;
 
-    .logo-central{
-        width: 220px;
-    }
+    padding: 0;
+  }
 
-    .beneficios{
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  .nav-links li{
+    list-style: none;
+  }
 
-    .item{
-        max-width: 100%;
-    }
+  .nav-links a{
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
 
-    .hero-image img{
-        width: 100%;
-        max-width: 280px;
-        margin-top: 20px;
-    }
+  .nav-links a.active{
+    border-bottom: 2px solid #c9a86a;
+    padding-bottom: 4px;
+  }
 
-    /* ===== TÍTULOS ===== */
-    .sub-titulo{
-        font-size: 18px;
-        text-align: center;
-    }
+  .active {
+    border-bottom: none;
+    background: #c9a86a;
+    color: #fff !important;
+    padding-bottom: 8px;
+  }
 
-    /* ===== CARDS ===== */
-    .exclusivos,
-    .locais-quentes,
-    .stories{
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+  /* ================= HERO ================= */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    padding-top: 30px;
+  }
 
-    .exclusivos div h3{
-        font-size: 14px;
-    }
+  .hero-text {
+    width: 100%;
+  }
 
-    /* ===== CTA ===== */
-    .cta{
-        text-align: center;
-        padding: 25px;
-    }
+  .logo-central {
+    width: 220px;
+  }
 
-    .cta h3{
-        font-size: 20px;
-        line-height: 1.4;
-    }
+  .hero-text h1 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
 
-    .cta p{
-        font-size: 14px;
-    }
+  /* ================= BENEFÍCIOS (HOME) ================= */
+  .beneficios {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
-    .cta-video{
-        position: static;
-        transform: none;
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-    }
+  .item {
+    flex: 1;
+    min-width: 90px;
+    max-width: 120px;
+  }
 
-    .cta-video video{
-        width: 120px;
-        height: 120px;
-    }
+  .item ion-icon {
+    font-size: 28px;
+  }
 
-    /* ===== STORIES ===== */
-    video{
-        width: 100%;
-        height: auto;
-        max-height: 420px;
-    }
+  .item p {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
 
-    /* ===== BOTÃO ===== */
-    .ganhar-btn{
-        width: 90%;
-        font-size: 16px;
-        padding: 12px;
-    }
+  /* ================= HERO IMAGE ================= */
+  .hero-image img {
+    width: 100%;
+    max-width: 280px;
+    margin-top: 10px;
+  }
 
-    /* ===== SOBRE ===== */
-    .sobre-nos p{
-        font-size: 14px;
-        line-height: 1.6;
-        padding: 0 10px;
-    }
+  /* ================= TÍTULOS ================= */
+  .sub-titulo {
+    font-size: 18px;
+  }
 
-    /* ===== FOOTER ===== */
-    .rodape a{
-        font-size: 18px;
-    }
+  /* ================= CONFIRA ================= */
+  .exclusivos {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px 5%;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .exclusivos::-webkit-scrollbar {
+    display: none;
+  }
+
+  .exclusivos > div {
+    flex: 0 0 80%;
+    max-width: 280px;
+    scroll-snap-align: start;
+  }
+
+  /* ================= MAIS ACESSADOS ================= */
+  .locais-quentes {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px 5%;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .locais-quentes::-webkit-scrollbar {
+    display: none;
+  }
+
+  .locais-quentes > div {
+    flex: 0 0 80%;
+    max-width: 300px;
+    scroll-snap-align: start;
+  }
+
+  /* ================= CTA ================= */
+  .cta {
+    text-align: center;
+    padding: 25px;
+  }
+
+  .cta h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .cta p {
+    font-size: 14px;
+  }
+
+  .cta-video {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-video video {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* ================= STORIES ================= */
+  .stories {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  video {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  /* ================= BOTÃO ================= */
+  .ganhar-btn {
+    width: 90%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* ================= DIFERENCIAIS ================= */
+  .faixa-diferenciais {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .item-diferencial {
+    justify-content: center;
+  }
+
+  /* ================= SOBRE ================= */
+  .sobre-nos p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  /* ================= FOOTER ================= */
+  .rodape a {
+    font-size: 18px;
+  }
 }

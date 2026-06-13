@@ -196,3 +196,93 @@ nav{
 }
 
 /* RESPONSIVO */
+@media(max-width: 768px){
+
+
+  /* ================= NAV ================= */
+  nav{
+    padding: 0 5%;
+    height: 80px;
+    justify-content: center;
+  }
+
+  /* LOGO SOME PRA GANHAR ESPAÇO */
+  .logo{
+    display: none;
+  }
+
+  /* ÍCONES SOMEM NO MOBILE */
+  .icons-top{
+    display: none;
+  }
+
+  /* MENU CENTRALIZADO E RESPONSIVO */
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    width: 100%;
+
+    padding: 0;
+  }
+
+  .nav-links li{
+    list-style: none;
+  }
+
+  .nav-links a{
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+
+  .nav-links a.active{
+    border-bottom: 2px solid #c9a86a;
+    padding-bottom: 4px;
+  }
+
+  /* ================= TÍTULO ================= */
+  .catalogo-section{
+    padding: 30px 0;
+  }
+
+  .titulo h1{
+    font-size: 22px;
+  }
+
+  .titulo p{
+    font-size: 13px;
+  }
+
+  /* ================= CARDS ================= */
+  .guia-fragrancias{
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .card-guia{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .card-guia img{
+    height: 140px;
+  }
+
+  .conteudo-guia h3{
+    font-size: 1rem;
+  }
+
+  .conteudo-guia p{
+    font-size: 0.78rem;
+  }
+
+  .notas-guia span{
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+}

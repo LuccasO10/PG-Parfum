@@ -235,32 +235,90 @@ nav{
 }
 
 /* RESPONSIVO */
-@media(max-width: 768px) {
+@media(max-width: 768px){
 
-  .nav-links{
-        display:flex;              
-        flex-direction:row;     
-        gap:15px;                  /* mais compacto */
-        justify-content:center;    
-        flex-wrap:wrap;            /* quebra se precisar */
-        padding:5px 0;
-        margin-top: 20px;
-    }
-  
-  .logo {
+  /* ===== NAVBAR AJUSTADA ===== */
+  nav{
+    padding: 0 5%;
+    height: 80px;
+    justify-content: center;
+  }
+
+  /* LOGO SOME PRA GANHAR ESPAÇO */
+  .logo{
     display: none;
   }
+
+  /* ÍCONES SOMEM NO MOBILE */
   .icons-top{
     display: none;
   }
-  .sobre-section {
+
+  /* MENU CENTRALIZADO E RESPONSIVO */
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    width: 100%;
+
+    padding: 0;
+  }
+
+  .nav-links li{
+    list-style: none;
+  }
+
+  .nav-links a{
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+
+  .nav-links a.active{
+    border-bottom: 2px solid #c9a86a;
+    padding-bottom: 4px;
+  }
+
+  /* ===== AJUSTES GERAIS DA PÁGINA ===== */
+  .sobre-section{
     padding: 40px 10%;
   }
 
-  .texto p {
+  .texto{
+    padding: 25px;
+  }
+
+  .texto p{
     font-size: 14px;
     line-height: 1.6;
   }
 
+  /* EMBALAGENS RESPONSIVO */
+  .embalagem{
+    gap: 40px;
+  }
 
+  .embalagem div{
+    width: 100%;
+    max-width: 320px;
+    height: 380px;
+  }
+
+  /* BENEFÍCIOS */
+  .beneficios{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item{
+  flex: 1 1 120px;
+  max-width: 160px;
+}
 }
